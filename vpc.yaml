@@ -1,0 +1,32 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: vpc-template
+Resources:
+  myVpc:
+    Type: AWS::EC2::VPC
+    Description: VPC definition
+    Properties:
+      CidrBlock: 172.21.0.0/16
+      Tags:
+        -
+          Key: Name
+          Value: myVPC
+  Public1Subnet:
+    Type: AWS::EC2::Subnet 
+    Properties:
+      CidrBlock: 172.21.0.0/24
+      VpcId: !Ref myVpc
+  Public2Subnet:
+    Type: AWS::EC2::Subnet 
+    Properties:
+      CidrBlock: 172.21.1.0/24
+      VpcId: !Ref myVpc
+  Private1Subnet:
+    Type: AWS::EC2::Subnet 
+    Properties:
+      CidrBlock: 172.21.2.0/24
+      VpcId: !Ref myVpc
+  Private2Subnet:
+    Type: AWS::EC2::Subnet 
+    Properties:
+      CidrBlock: 172.21.3.0/24
+      VpcId: !Ref myVpc
