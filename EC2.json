@@ -1,29 +1,15 @@
 {
-	"AWSTemplateFormatVersion": "2010-09-09",
-	"Description": "EC2Instance",
-	"SecurityGroups" : ["Id-1", "Id-2", "Id-3"],
-	"Resources": {
-	  "MyEC2Instance": {
-		"Type": "AWS::EC2::Instance",
-		"Properties": [ 
-			{
-				"ImageId": "ami-0d729d2846a86a9e7",
-		  "InstanceType": "t2.micro"
-			},
-			{
-				"ImageId": "ami-0d729d2846a86a9e7",
-		  "InstanceType": "t2.micro"
-			},
-			{
-				"ImageId": "ami-0d729d2846a86a9e7",
-		  "InstanceType": "t2.micro"
-			}
-
-
-
-		]
-		  
-		
-	  }
-	}
-  }
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "A sample template",
+    "Resources": {
+        "MyEC2Instance": {
+            "Type": "AWS::EC2::Instance",
+            "Properties": {
+                "ImageId": "ami-01bb5fb90f6e8dc9d",
+                "InstanceType": "t2.micro"
+			       
+            
+        }
+    }
+}
+}
